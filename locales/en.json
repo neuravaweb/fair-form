@@ -1,0 +1,99 @@
+{
+  "common": {
+    "language": "Language",
+    "polish": "Polski",
+    "english": "English"
+  },
+  "hero": {
+    "title": "Premium Fabric Solutions",
+    "subtitle": "Specializing in high-quality fabrics for discerning professionals. We participate in international fabric fairs, offering exceptional B2B cooperation opportunities.",
+    "description": "Experience luxury textiles crafted for excellence. Partner with us for your next project."
+  },
+  "form": {
+    "title": "New Customer Registration",
+    "description": "Select your desired cardboard samples and provide your company contact details. Our team will review your request and get back to you.",
+    "cardboardSelection": "Select Cardboard Samples",
+    "samplesSelected": "samples selected",
+    "sample": "sample",
+    "samples": "samples",
+    "companyName": "Company Name",
+    "nip": "NIP",
+    "nipPlaceholder": "10 digits",
+    "nipValid": "✓ Valid NIP",
+    "deliveryAddress": "Delivery Address",
+    "country": "Country",
+    "postalCode": "Postal Code",
+    "city": "City",
+    "street": "Street",
+    "buildingNumber": "Building Number",
+    "apartmentNumber": "Door Number",
+    "phone": "Phone Number",
+    "email": "E-mail",
+    "emailValid": "✓ Valid email",
+    "notes": "Notes",
+    "submit": "Submit Request",
+    "submitting": "Submitting...",
+    "success": "Thank you! Your request has been submitted successfully.",
+    "required": "*",
+    "errors": {
+      "companyNameRequired": "Company name is required",
+      "nipRequired": "NIP is required",
+      "nipInvalid": "NIP must be exactly 10 digits",
+      "deliveryAddressRequired": "Delivery address is required",
+      "countryRequired": "Country is required",
+      "postalCodeRequired": "Postal code is required",
+      "cityRequired": "City is required",
+      "streetRequired": "Street is required",
+      "buildingNumberRequired": "Building number is required",
+      "phoneRequired": "Phone number is required",
+      "emailRequired": "Email is required",
+      "emailInvalid": "Please enter a valid email address"
+    }
+  },
+  "admin": {
+    "login": {
+      "title": "Admin Login",
+      "username": "Username",
+      "password": "Password",
+      "login": "Login",
+      "loggingIn": "Logging in...",
+      "error": "Login failed"
+    },
+    "dashboard": {
+      "title": "Admin Dashboard",
+      "submissionsTotal": "submissions total",
+      "submission": "submission",
+      "submissions": "submissions",
+      "exportAll": "Export All PDF",
+      "logout": "Logout",
+      "companyName": "Company Name",
+      "nip": "NIP",
+      "email": "E-mail",
+      "phone": "Phone",
+      "date": "Date",
+      "actions": "Actions",
+      "viewDetails": "View Details",
+      "noSubmissions": "No submissions yet"
+    },
+    "details": {
+      "title": "Submission Details",
+      "back": "← Back to Dashboard",
+      "exportPdf": "Export PDF",
+      "companyName": "Company Name",
+      "nip": "NIP",
+      "deliveryAddress": "Delivery Address",
+      "country": "Country",
+      "postalCode": "Postal Code",
+      "city": "City",
+      "street": "Street",
+      "buildingNumber": "Building Number",
+      "apartmentNumber": "Door Number",
+      "phone": "Phone Number",
+      "email": "E-mail",
+      "notes": "Notes",
+      "selectedSamples": "Selected Cardboard Samples",
+      "total": "Total",
+      "submissionDate": "Submission Date"
+    }
+  }
+}

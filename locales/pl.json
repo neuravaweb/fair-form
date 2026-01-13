@@ -1,0 +1,99 @@
+{
+  "common": {
+    "language": "Język",
+    "polish": "Polski",
+    "english": "English"
+  },
+  "hero": {
+    "title": "Premiumowe Rozwiązania Tekstylne",
+    "subtitle": "Specjalizujemy się w wysokiej jakości tkaninach dla wymagających profesjonalistów. Uczestniczymy w międzynarodowych targach tekstylnych, oferując wyjątkowe możliwości współpracy B2B.",
+    "description": "Doświadcz luksusowych tkanin stworzonych z dbałością o doskonałość. Współpracuj z nami przy swoim następnym projekcie."
+  },
+  "form": {
+    "title": "Rejestracja Nowego Klienta",
+    "description": "Wybierz żądane próbki kartonów i podaj dane kontaktowe swojej firmy. Nasz zespół przejrzy Twoje zgłoszenie i skontaktuje się z Tobą.",
+    "cardboardSelection": "Wybierz Próbki Kartonów",
+    "samplesSelected": "próbek wybrano",
+    "sample": "próbka",
+    "samples": "próbki",
+    "companyName": "Nazwa Firmy",
+    "nip": "NIP",
+    "nipPlaceholder": "10 cyfr",
+    "nipValid": "✓ Poprawny NIP",
+    "deliveryAddress": "Adres Dostawy",
+    "country": "Kraj",
+    "postalCode": "Kod Pocztowy",
+    "city": "Miejscowość",
+    "street": "Ulica",
+    "buildingNumber": "Numer Budynku",
+    "apartmentNumber": "Numer Drzwi",
+    "phone": "Nr. Telefonu",
+    "email": "E-mail",
+    "emailValid": "✓ Poprawny email",
+    "notes": "Notatka",
+    "submit": "Wyślij Zgłoszenie",
+    "submitting": "Wysyłanie...",
+    "success": "Dziękujemy! Twoje zgłoszenie zostało pomyślnie wysłane.",
+    "required": "*",
+    "errors": {
+      "companyNameRequired": "Nazwa firmy jest wymagana",
+      "nipRequired": "NIP jest wymagany",
+      "nipInvalid": "NIP musi składać się z dokładnie 10 cyfr",
+      "deliveryAddressRequired": "Adres dostawy jest wymagany",
+      "countryRequired": "Kraj jest wymagany",
+      "postalCodeRequired": "Kod pocztowy jest wymagany",
+      "cityRequired": "Miejscowość jest wymagana",
+      "streetRequired": "Ulica jest wymagana",
+      "buildingNumberRequired": "Numer budynku jest wymagany",
+      "phoneRequired": "Numer telefonu jest wymagany",
+      "emailRequired": "Email jest wymagany",
+      "emailInvalid": "Proszę podać poprawny adres email"
+    }
+  },
+  "admin": {
+    "login": {
+      "title": "Logowanie Administratora",
+      "username": "Nazwa użytkownika",
+      "password": "Hasło",
+      "login": "Zaloguj",
+      "loggingIn": "Logowanie...",
+      "error": "Błąd logowania"
+    },
+    "dashboard": {
+      "title": "Panel Administratora",
+      "submissionsTotal": "zgłoszeń łącznie",
+      "submission": "zgłoszenie",
+      "submissions": "zgłoszenia",
+      "exportAll": "Eksportuj Wszystkie PDF",
+      "logout": "Wyloguj",
+      "companyName": "Nazwa Firmy",
+      "nip": "NIP",
+      "email": "E-mail",
+      "phone": "Telefon",
+      "date": "Data",
+      "actions": "Akcje",
+      "viewDetails": "Zobacz Szczegóły",
+      "noSubmissions": "Brak zgłoszeń"
+    },
+    "details": {
+      "title": "Szczegóły Zgłoszenia",
+      "back": "← Powrót do Panelu",
+      "exportPdf": "Eksportuj PDF",
+      "companyName": "Nazwa Firmy",
+      "nip": "NIP",
+      "deliveryAddress": "Adres Dostawy",
+      "country": "Kraj",
+      "postalCode": "Kod Pocztowy",
+      "city": "Miejscowość",
+      "street": "Ulica",
+      "buildingNumber": "Numer Budynku",
+      "apartmentNumber": "Numer Drzwi",
+      "phone": "Nr. Telefonu",
+      "email": "E-mail",
+      "notes": "Notatka",
+      "selectedSamples": "Wybrane Próbki Kartonów",
+      "total": "Łącznie",
+      "submissionDate": "Data Zgłoszenia"
+    }
+  }
+}

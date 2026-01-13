@@ -1,0 +1,38 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Admin {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  password  String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Submission {
+  id              String   @id @default(cuid())
+  companyName     String   // Nazwa Firmy
+  nip             String   // NIP (10 digits)
+  country         String?  // Kraj / Country
+  postalCode      String?  // Kod Pocztowy / Postal Code
+  city            String?  // Miejscowość / City
+  street          String?  // Ulica / Street
+  buildingNumber  String?  // Numer Budynku / Building Number
+  apartmentNumber String?  // Numer Mieszkania / Apartment Number (optional)
+  deliveryAddress String?  // Legacy field
+  phone           String   // Nr. Telefonu
+  email           String   // E-mail
+  notes           String?  // Notatka (optional)
+  collections     String   // JSON array of collection selections: [{collection: "Sinope", cartelas: [1,2,3]}]
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+}

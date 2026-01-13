@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap');
+
+@layer base {
+  * {
+    @apply border-luxury-gold/20;
+  }
+  
+  body {
+    @apply bg-luxury-black text-luxury-text font-luxury-body antialiased;
+    min-height: 100vh;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-luxury-heading;
+  }
+}
+
+@layer utilities {
+  .gold-border {
+    @apply border border-luxury-gold/40;
+  }
+  
+  .gold-border-hover {
+    @apply transition-all duration-300 hover:border-luxury-gold hover:shadow-[0_0_15px_rgba(201,162,77,0.3)];
+  }
+  
+  .gold-button {
+    @apply px-8 py-3 gold-border bg-transparent text-luxury-gold font-medium transition-all duration-300 hover:bg-luxury-gold hover:text-luxury-black hover:shadow-[0_0_20px_rgba(201,162,77,0.5)];
+  }
+  
+  .gold-button:disabled {
+    @apply opacity-50 cursor-not-allowed hover:bg-transparent hover:text-luxury-gold hover:shadow-none;
+  }
+}
