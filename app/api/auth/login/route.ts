@@ -5,7 +5,9 @@ import { checkRateLimit, recordFailedAttempt, resetRateLimit, getClientIP } from
 
 export async function POST(request: NextRequest) {
   try {
-    const { username, password, sessionId } = await request.json()
+    const body = await request.json()
+    console.log('LOGIN BODY:', { username: body.username, password: '[REDACTED]', sessionId: body.sessionId })
+    const { username, password, sessionId } = body
     const ip = getClientIP(request)
 
     if (!username || !password) {
@@ -54,7 +56,10 @@ export async function POST(request: NextRequest) {
       where: { username },
     })
 
+    console.log('ADMIN FOUND:', admin ? { id: admin.id, username: admin.username, hasPassword: !!admin.password } : null)
+
     if (!admin) {
+      console.log('ADMIN NOT FOUND')
       recordFailedAttempt(ip)
       return NextResponse.json(
         { error: 'Invalid credentials' },
@@ -63,8 +68,10 @@ export async function POST(request: NextRequest) {
     }
 
     const isValidPassword = await bcrypt.compare(password, admin.password)
+    console.log('PASSWORD CHECK:', { isValidPassword })
 
     if (!isValidPassword) {
+      console.log('PASSWORD MISMATCH')
       recordFailedAttempt(ip)
       return NextResponse.json(
         { error: 'Invalid credentials' },
@@ -74,6 +81,8 @@ export async function POST(request: NextRequest) {
 
     // Success - reset rate limit
     resetRateLimit(ip)
+
+    console.log('LOGIN SUCCESS')
 
     // In production, use proper session management or JWT
     // For now, we'll use a simple approach with httpOnly cookies
