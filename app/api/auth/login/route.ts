@@ -5,10 +5,10 @@ import { checkRateLimit, recordFailedAttempt, resetRateLimit, getClientIP } from
 
 export async function POST(request: NextRequest) {
   try {
-    const { email, password, sessionId } = await request.json()
+    const { username, password, sessionId } = await request.json()
     const ip = getClientIP(request)
 
-    if (!email || !password) {
+    if (!username || !password) {
       return NextResponse.json(
         { error: 'Username and password are required' },
         { status: 400 }
@@ -51,7 +51,7 @@ export async function POST(request: NextRequest) {
     }
 
     const admin = await prisma.admin.findUnique({
-      where: { email },
+      where: { username },
     })
 
     if (!admin) {

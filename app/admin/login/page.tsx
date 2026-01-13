@@ -37,7 +37,7 @@ export default function AdminLogin() {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({ 
-          email: username, 
+          username,
           password,
           sessionId, // Server will verify the already-verified captcha
         }),

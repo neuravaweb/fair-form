@@ -16,13 +16,13 @@ Create a `.env` file in the root directory with the following content:
 DATABASE_URL="file:./dev.db"
 NEXTAUTH_URL="http://localhost:3000"
 NEXTAUTH_SECRET="change-this-to-a-random-string-in-production"
-ADMIN_EMAIL="admin@fabricfair.com"
+ADMIN_USERNAME="admin"
 ADMIN_PASSWORD="admin123"
 ```
 
 **Important**: 
 - Change `NEXTAUTH_SECRET` to a random string (you can generate one with: `openssl rand -base64 32`)
-- Change `ADMIN_EMAIL` and `ADMIN_PASSWORD` to your preferred admin credentials
+- Change `ADMIN_USERNAME` and `ADMIN_PASSWORD` to your preferred admin credentials
 
 ## Step 3: Initialize Database
 

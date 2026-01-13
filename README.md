@@ -27,7 +27,7 @@ Create a `.env` file in the root directory:
 DATABASE_URL="file:./dev.db"
 NEXTAUTH_URL="http://localhost:3000"
 NEXTAUTH_SECRET="your-secret-key-change-this-in-production"
-ADMIN_EMAIL="admin@fabricfair.com"
+ADMIN_USERNAME="admin"
 ADMIN_PASSWORD="admin123"
 ```
 
@@ -56,7 +56,7 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
 
 - **Login URL**: `/admin/login` or `http://localhost:3000/admin/login`
 - **Dashboard URL**: `/admin` or `http://localhost:3000/admin` (requires login)
-- **Default Username**: `admin` (or as set in `.env` as `ADMIN_EMAIL`)
+- **Default Username**: `admin` (or as set in `.env` as `ADMIN_USERNAME`)
 - **Default Password**: `admin123` (or as set in `.env` as `ADMIN_PASSWORD`)
 
 **Important**: Change the admin credentials in production!
