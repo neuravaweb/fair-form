@@ -5,7 +5,7 @@ import { checkRateLimit, recordFailedAttempt, resetRateLimit, getClientIP } from
 
 export async function POST(request: NextRequest) {
   try {
-    const { username, password, sessionId } = await request.json()
+    const { username, password } = await request.json()
     const ip = getClientIP(request)
 
     if (!username || !password) {
@@ -29,26 +29,7 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    // Verify captcha if sessionId provided (server-side final check - marks as used)
-    // The captcha should have been verified client-side first
-    if (sessionId) {
-      const { verifyCaptcha } = await import('@/lib/captchaStore')
-      // For server-side, we check if captcha was already verified (client-side)
-      // markAsUsed = true to mark captcha as used after successful server-side verification
-      // Pass empty code since we're only checking if it was already verified
-      const captchaResult = await verifyCaptcha(sessionId, '', ip, true)
-      
-      if (!captchaResult.success) {
-        return NextResponse.json(
-          { 
-            error: captchaResult.error || 'Wymagana weryfikacja captcha. Zweryfikuj kod captcha przed zalogowaniem.',
-            blocked: captchaResult.blocked,
-            remainingTime: captchaResult.remainingTime,
-          },
-          { status: captchaResult.blocked ? 429 : 400 }
-        )
-      }
-    }
+    // Captcha validation disabled - no longer required
 
     const admin = await prisma.admin.findUnique({
       where: { username },

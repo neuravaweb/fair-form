@@ -53,25 +53,7 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    // Verify captcha if sessionId provided (server-side final check - marks as used)
-    if (validation.data.sessionId) {
-      const { verifyCaptcha } = await import('@/lib/captchaStore')
-      // For server-side, we check if captcha was already verified (client-side)
-      // markAsUsed = true to mark captcha as used after successful server-side verification
-      // We pass empty string as code since we're checking the verified status
-      const captchaResult = await verifyCaptcha(validation.data.sessionId, '', ip, true)
-      
-      if (!captchaResult.success) {
-        return NextResponse.json(
-          { 
-            error: captchaResult.error || 'Captcha verification required',
-            blocked: captchaResult.blocked,
-            remainingTime: captchaResult.remainingTime,
-          },
-          { status: captchaResult.blocked ? 429 : 400 }
-        )
-      }
-    }
+    // Captcha validation disabled - no longer required
 
     // Validate collections structure
     if (!validation.data.collections || validation.data.collections.length === 0) {
